@@ -19,13 +19,11 @@ function App() {
   }, []);
 
   const createUser = () => {
-    //alert("clicked")
     Axios.post("http://localhost:3003/api/users/createUser", {
       name: name,
       username: username,
       age: age,
     }).then((response) => {
-      //alert("User created")
       setListOfUsers([
         ...listOfUsers,
         { name: name, username: username, age: age },
